@@ -1,7 +1,9 @@
-package repository;
+package com.universitysystem.repository;
 
-import model.Registration;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.universitysystem.model.Registration;
+
 import java.util.List;
 import java.util.Optional;
 

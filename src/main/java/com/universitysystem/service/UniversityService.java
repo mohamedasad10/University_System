@@ -1,14 +1,16 @@
-package service;
+package com.universitysystem.service;
 
-import model.Student;
-import model.Module;
-import model.Registration;
-import repository.StudentRepository;
-import repository.ModuleRepository;
-import repository.RegistrationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.universitysystem.model.Module;
+import com.universitysystem.model.Registration;
+import com.universitysystem.model.Student;
+import com.universitysystem.repository.ModuleRepository;
+import com.universitysystem.repository.RegistrationRepository;
+import com.universitysystem.repository.StudentRepository;
+
 import java.util.List;
 
 @Service

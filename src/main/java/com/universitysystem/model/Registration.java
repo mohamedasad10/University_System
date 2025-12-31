@@ -1,4 +1,4 @@
-package model;
+package com.universitysystem.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,20 +11,20 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @Table(name = "registrations")
 public class Registration {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    @ManyToOne
-    @JoinColumn(name = "student_id", nullable = false)
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "student_id")
     private Student student;
-    
-    @ManyToOne
-    @JoinColumn(name = "module_id", nullable = false)
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "module_id")
     private Module module;
-    
+
     private Double mark;
-    
+
     private String semester;
 }

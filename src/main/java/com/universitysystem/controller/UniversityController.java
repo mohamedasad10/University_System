@@ -1,13 +1,15 @@
-package controller;
+package com.universitysystem.controller;
 
-import model.Module;
-import model.Student;
-import model.Registration;
-import service.UniversityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.universitysystem.model.Module;
+import com.universitysystem.model.Registration;
+import com.universitysystem.model.Student;
+import com.universitysystem.service.UniversityService;
+
 import java.util.List;
 
 @RestController
