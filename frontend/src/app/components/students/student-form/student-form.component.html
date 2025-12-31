@@ -1,0 +1,41 @@
+<p>student-form works!</p>
+
+
+<div class="container">
+  <h2>Create New Student</h2>
+
+  <!-- Success message -->
+  <div *ngIf="successMessage" class="success">
+    {{ successMessage }}
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <form class="student-form" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" [(ngModel)]="student.firstName" name="firstName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" [(ngModel)]="student.lastName" name="lastName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="student.email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="studentNumber">Student Number:</label>
+      <input type="text" id="studentNumber" [(ngModel)]="student.studentNumber" name="studentNumber" required />
+    </div>
+
+    <button type="submit" class="btn-submit">Create Student</button>
+  </form>
+</div>
