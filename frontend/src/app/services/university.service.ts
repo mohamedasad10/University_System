@@ -6,22 +6,20 @@ import { Module } from '../models/module.model';
 import { Registration } from '../models/registration.model';
 
 @Injectable({
-  providedIn: 'root'  // Makes this service available everywhere
+  providedIn: 'root'
 })
 export class UniversityService {
-  
-  private apiUrl = 'http://localhost:8080/api';  // Spring Boot URL
+  private apiUrl = 'http://localhost:8080/api';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-// ========== STUDENT OPERATIONS ==========
-createStudent(student: Student): Observable<Student> {
-  return this.http.post<Student>(`${this.apiUrl}/students`, student);
-}
+  createStudent(student: Student): Observable<Student> {
+    return this.http.post<Student>(`${this.apiUrl}/students`, student);
+  }
 
-getAllStudents(): Observable<Student[]> {
-  return this.http.get<Student[]>(`${this.apiUrl}/students`);
-}
+  getAllStudents(): Observable<Student[]> {
+    return this.http.get<Student[]>(`${this.apiUrl}/students`);
+  }
 
 getStudentById(id: number): Observable<Student> {
   return this.http.get<Student>(`${this.apiUrl}/students/${id}`);
